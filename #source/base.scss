@@ -1,0 +1,35 @@
+*, *::before, *::after{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+.--hide{
+	display: none;
+}
+
+body{
+	background-color: #000;
+	color: #fff;
+	@include jost-font-family();
+}
+
+li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.content{
+	max-width: 1200px;
+	margin: 0 auto;
+
+	@include media-1400 {
+		padding: 0 30px;
+	}
+
+}
+

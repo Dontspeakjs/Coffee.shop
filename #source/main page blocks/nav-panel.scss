@@ -1,0 +1,150 @@
+.nav-panel{
+
+	border-bottom: 1px solid #32323D; 
+
+	& .nav-panel-wrap{
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	& .container--left-side,
+	& .container--right-side{
+		width: 40%;
+
+		@include media-1200{
+			width: 43%;
+		}
+
+		@include media-768{
+			display: flex;
+		}
+	}
+
+	& .navigation{
+
+		@include media-768{
+			display: none;
+		}
+
+	}
+
+	& .navigation-mobile-trigger{
+		padding: 10px 0;
+	}
+
+	& .navigation-mobile-trigger button{
+		position: relative;
+		width: 23px;
+		height: 2px;
+		background-color: #ffffff;
+		border: none;
+		cursor: pointer;
+		display: none;
+
+		@include media-768{
+			display: block;
+		}
+
+	}
+
+	& .navigation-mobile-trigger button:before,
+	& .navigation-mobile-trigger button:after{
+		content: '';
+		display: block;
+		position: absolute;
+		top: -9px;
+		width: 23px;
+		background-color: #ffffff;
+		height: 2px;
+		left: 0px;
+	}
+
+	& .navigation-mobile-trigger button:after{
+		top: 9px;		
+	}
+
+
+	& .navigation-mobile{
+		position: absolute;
+		top: 100%;
+		z-index: 10;
+		background-color: #000;
+
+		& .navigation__link{
+			display: block;
+			padding: 15px 45px;
+			border: 1px solid #32323D; 
+		}
+	}
+
+	& .logo{
+
+		padding: 18px 0;	
+
+		@include media-1200 {
+			padding: 12px 0;
+		}
+
+		@include media-768 {
+			padding: 4px 0;
+		}
+	}
+
+	& .logo__img{
+		height: 54px;
+
+		@include media-1200 {
+			height: 46px;
+		}
+	}
+
+	& .container--right-side{
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	& .navigation__link{
+
+		transition: .3s color;
+
+		@include nav-link-styled($margin: 0 35px 0 0, $text-transform: uppercase);
+
+		@include media-1200 {
+			margin: 0 12px 0 0;
+		}
+
+		@include media-768 {
+			font-size: 13px;
+		}
+	}
+
+	& .user-menu__link{
+		margin-left: 30px;
+
+		@include media-1200 {
+			margin-left: 20px;
+		}
+
+
+	}
+
+	& .user-menu__link img{
+
+		@include media-1200 {
+			width: 20px;
+			height: 20px;
+		}
+
+		@include media-576 {
+			width: 17px;
+			height: 17px;
+		}
+	}
+
+	& .navigation__link:hover{
+		color: $cream-ui-color;
+	}
+
+}

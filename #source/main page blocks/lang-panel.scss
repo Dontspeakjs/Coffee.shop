@@ -1,0 +1,31 @@
+.lang-panel{
+
+	border-bottom: 1px solid #32323D;
+
+	& .lang-panel-wrap{
+		display: flex;
+		justify-content: space-between;
+		padding: 6px 0;
+	}
+
+	& .lang-panel__telephone-link,
+	& .lang-panel__lang-change{
+		transition: .2s color;
+	}
+
+	& .lang-panel__lang-change{
+
+		@include nav-link-styled($text-transform: uppercase, $margin: 0 10px 0 0);
+		@include jost-font-family($font-weight: 600, $font-size: 14px);
+
+		@include media-768{
+			font-size: 13px !important;
+		}
+	}
+
+	& .lang-panel__lang-change:hover,
+	& .lang-panel__telephone-link:hover{
+		color: $cream-ui-color;
+	}
+
+}

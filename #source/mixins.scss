@@ -1,0 +1,50 @@
+@mixin jost-font-family($font-weight: 400, $font-size: 14px, $color: #fff){
+  font-family: "Jost";
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin nav-link-styled($font-size: 15px, $text-transform: lowercase, $margin: 0px, $display: inline-block){
+	font-size : $font-size;
+	text-transform : $text-transform;
+	margin : $margin;
+	display : $display;
+}
+
+@mixin btn-link-styled($border: none, $text-transform: lowercase, $font-size: 15px, $width: 200px, $height: 50px, $line-height: normal, $border-radius: none, $display: inline-block, $text-align: center){
+	width : $width;
+    height : $height;
+    line-height : $line-height;
+    border-radius : $border-radius;
+	display : $display;    
+	text-align: $text-align;
+	border:  $border;
+	text-transform : $text-transform;	
+}
+
+@mixin media-398 {
+  @media (max-width: 398px) { @content; }
+}
+
+@mixin media-576 {
+  @media (max-width: 576px) { @content; }
+}
+
+@mixin media-768 {
+  @media (max-width: 768px) { @content; }
+}
+
+@mixin media-992 {
+  @media (max-width: 992px) { @content; }
+}
+
+@mixin media-1200 {
+  @media (max-width: 1200px) { @content; }
+}
+
+@mixin media-1400 {
+  @media (max-width: 1400px) { @content; }
+}
+
+
